@@ -16,7 +16,7 @@ export default function Index() {
   };
 
   const goToBundledPage = () => {
-    window.location.href = "http://localhost/test-page.html";
+    window.location.href = "http://localhost/test-page";
   };
 
   const goToRemixTestPage = () => {
