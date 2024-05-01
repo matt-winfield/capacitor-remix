@@ -5,7 +5,6 @@ const config: CapacitorConfig = {
   appName: "Capacitor Remix",
   webDir: "capacitor/bundled-app/dist",
   server: {
-    // url: "http://10.0.2.2:3000",
     cleartext: true,
     allowNavigation: ["*"],
   },

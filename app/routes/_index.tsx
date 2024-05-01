@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useNavigate } from "@remix-run/react";
+import { Capacitor } from "@capacitor/core";
 
 export const meta: MetaFunction = () => {
   return [
@@ -26,9 +27,14 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Remix Home</h1>
-      <button onClick={goToBundledHome}>Go to bundled home</button>
-      <button onClick={goToBundledPage}>Go to bundled test page</button>
       <button onClick={goToRemixTestPage}>Go to Remix test page</button>
+      {Capacitor.isNativePlatform() && (
+        <>
+          <button onClick={goToBundledHome}>Go to bundled home</button>
+          <button onClick={goToBundledPage}>Go to bundled test page</button>
+        </>
+      )}
+      <div>Platform: {Capacitor.getPlatform()}</div>
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import { Capacitor } from "@capacitor/core";
 import { useNavigate } from "react-router-dom";
+import { config } from "../config";
 
 export const HomePage = () => {
   const navigate = useNavigate();
   const platform = Capacitor.getPlatform();
 
   const goToRemix = () => {
-    window.location.href = "http://10.0.2.2:3000";
+    window.location.href = config.webUrl;
   };
 
   const goToTestPage = () => {

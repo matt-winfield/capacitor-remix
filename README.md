@@ -1,36 +1,23 @@
-# Welcome to Remix + Vite!
+# Capacitor + Remix example
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
+This is an example of how to use [Remix](https://remix.run) with [Capacitor](https://capacitorjs.com/).
 
-## Development
+It includes a Vite React app which is bundled with the Capacitor installation for offline functionality.
 
-Run the Vite dev server:
+This offline app can redirect to the Remix app, both of which can use Capacitor plugins.
 
-```shellscript
-npm run dev
-```
+## Running
 
-## Deployment
+`pnpm install`
 
-First, build your app for production:
+Build the native dependencies:
 
-```sh
-npm run build
-```
+`pnpm build:native`
 
-Then run the app in production mode:
+Run the remix server:
 
-```sh
-npm start
-```
+`pnpm dev`
 
-Now you'll need to pick a host to deploy it to.
+Run the native app:
 
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
+`npx cap run android` or `npx cap run ios`, or open and run the `android`/`ios` project in Android Studio or Xcode.
