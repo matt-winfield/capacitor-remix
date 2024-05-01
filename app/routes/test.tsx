@@ -8,27 +8,28 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
+export default function Test() {
   const navigate = useNavigate();
+  console.log("REMIX LOCATION: ", window.location.href);
 
   const goToBundledHome = () => {
     window.location.href = "http://localhost/";
   };
 
   const goToBundledPage = () => {
-    window.location.href = "http://localhost/test-page.html";
+    window.location.href = "http://localhost/test-page";
   };
 
-  const goToRemixTestPage = () => {
-    navigate("/test");
+  const goToRemixHome = () => {
+    navigate("/");
   };
 
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Remix Home</h1>
+      <h1>Remix Test Page</h1>
       <button onClick={goToBundledHome}>Go to bundled home</button>
       <button onClick={goToBundledPage}>Go to bundled test page</button>
-      <button onClick={goToRemixTestPage}>Go to Remix test page</button>
+      <button onClick={goToRemixHome}>Go to Remix home page</button>
     </div>
   );
 }

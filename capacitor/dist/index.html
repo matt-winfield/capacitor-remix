@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Home</title>
+    <script>
+      function goToExternalUrl() {
+        window.location.href = "http://10.0.2.2:3000";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Bundled Home</h1>
+    <button onclick="goToExternalUrl()">
+      Navigate to Remix (external URL)
+    </button>
+    <button onclick="window.location.href = '/test-page.html'">
+      Test Page
+    </button>
+  </body>
+</html>
